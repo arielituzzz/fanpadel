@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import userSlice from "../features/user/userSlice";
-import generalSlice from "../features/general/generalSlice";
+import shiftsSlice from "../features/shifts/shiftsSlice";
 // import { shopApi } from "../services/shopApi";
 // import { authApi } from "../services/authApi";
 // import shopSlice from "../features/shop/shopSlice";
@@ -9,7 +9,7 @@ import generalSlice from "../features/general/generalSlice";
 const store = configureStore({
   reducer: {
     user: userSlice,
-    general: generalSlice,
+    shifts: shiftsSlice,
     // shop: shopSlice,
     // cart: cartSlice,
     // [shopApi.reducerPath]: shopApi.reducer,

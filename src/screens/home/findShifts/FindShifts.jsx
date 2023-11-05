@@ -1,57 +1,79 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./findShifts.style";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setShiftSelection } from "../../../features/shifts/shiftsSlice";
 import { View, Text } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import SelectShift from "./components/selectShift/SelectShift";
+import dataClubs from "../../../data/dataClubs";
 const FindShifts = ({ navigation }) => {
-  const { selectionFind } = useSelector((state) => state.general);
+  const { shiftSelection } = useSelector((state) => state.shifts);
+  const dispatch = useDispatch();
 
   const [day, setDay] = useState(null);
   const [hour, setHour] = useState(null);
   const [club, setClub] = useState(null);
+  const [optionHours, setOptionHours] = useState([]);
+
   let todayDay = new Date().getDate() - 1;
-  const todayMonth = new Date().getMonth();
+  const todayMonth = new Date().getMonth() + 1;
   const todayYear = new Date().getFullYear();
   let todayHour = new Date().getHours();
 
-  const clubs = [
-    "El talar Padel",
-    "Norbi",
-    "Los Aromos",
-    "El tablon",
-    "El Rayo Padel",
-    "Punto Padel",
-  ];
+  const optionClubs = dataClubs.map((club) => {
+    return club.name;
+  });
 
-  const optionsDate = [];
-  const optionsHour = [];
+  const optionDays = [];
+
+  const findHours = (name, date) => {
+    dataClubs.find((club) => {
+      if (club.name === name) {
+        club.shiftsAvailable.find((shift) => {
+          if (shift.day === date) {
+            setOptionHours(shift.hours);
+          }
+        });
+      }
+    });
+  };
 
   for (let i = 0; i < 7; i++) {
     todayDay = todayDay + 1;
     const date = `${todayDay}/${todayMonth}/${todayYear}`;
-    optionsDate.push(
+    optionDays.push(
       i === 0 ? { key: date, value: `${date} HOY` } : { key: date, value: date }
     );
   }
-  for (let i = 0; i < 7; i++) {
-    todayHour = todayHour + 2;
-    if (todayHour > 22) {
-      break;
+  // for (let i = 0; i < 7; i++) {
+  //   todayHour = todayHour + 2;
+  //   if (todayHour > 22) {
+  //     break;
+  //   }
+
+  //   const rangeMaxHour = todayHour + 2;
+
+  //   const rangeHour = {
+  //     min: todayHour,
+  //     max: rangeMaxHour,
+  //   };
+
+  //   optionHours.push({
+  //     key: rangeHour,
+  //     value: `${todayHour} a ${rangeMaxHour}`,
+  //   });
+  // }
+
+  useEffect(() => {
+    dispatch(setShiftSelection({ club: club, day: day, hour: hour }));
+  }, [club, day, hour]);
+
+  useEffect(() => {
+    setHour(null);
+    if (club && day) {
+      findHours(club, day);
     }
-
-    const rangeMaxHour = todayHour + 2;
-
-    const rangeHour = {
-      min: todayHour,
-      max: rangeMaxHour,
-    };
-
-    optionsHour.push({
-      key: rangeHour,
-      value: `${todayHour} a ${rangeMaxHour}`,
-    });
-  }
+  }, [club, day]);
 
   return (
     <View style={styles.container}>
@@ -59,34 +81,42 @@ const FindShifts = ({ navigation }) => {
         <Text style={styles.container.title.text}>CENTRAL DE TURNOS</Text>
       </View>
       <View style={styles.container.find}>
-        <View>
+        <View style={styles.container.find.options}>
           <View>
             <SelectList
-              data={clubs}
+              data={optionClubs}
               setSelected={setClub}
               placeholder="Selecciona el club"
+              inputStyles={{ fontSize: 20 }}
+              search={false}
               // dropdownShown={false}
             />
           </View>
           <View>
             <SelectList
-              data={optionsDate}
+              data={optionDays}
               setSelected={setDay}
               placeholder="Selecciona el dia"
-              // dropdownShown={false}
+              search={false}
+              inputStyles={{ fontSize: 20 }}
             />
           </View>
-          <View>
-            <SelectList
-              data={optionsHour}
-              setSelected={setHour}
-              placeholder="Rango de horario"
-              // dropdownShown={false}
-            />
-          </View>
+          {shiftSelection?.club && shiftSelection?.day && (
+            <View>
+              <SelectList
+                data={optionHours}
+                setSelected={setHour}
+                placeholder="Selecciona el horario"
+                search={false}
+                notFoundText="No hay turnos disponibles"
+                inputStyles={{ fontSize: 20 }}
+              />
+            </View>
+          )}
         </View>
+
         <View>
-          <SelectShift />
+          <SelectShift shiftSelection={shiftSelection} />
         </View>
       </View>
     </View>

@@ -12,13 +12,16 @@ const styles = StyleSheet.create({
       alignItems: "center",
       marginBottom: 20,
       text: {
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: "bold",
       },
     },
     find: {
-      backgroundColor: colors.greyLight,
       rowGap: 20,
+      options: {
+        alignItems: "center",
+        rowGap: 10,
+      },
     },
   },
 });

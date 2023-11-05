@@ -2,18 +2,8 @@ import React, { useState } from "react";
 import { View, Text, Pressable } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import styles from "./home.style";
-import { useSelector, useDispatch } from "react-redux";
-import { setSelectionFind } from "../../features/general/generalSlice";
 
 const Home = ({ navigation }) => {
-  const dispatch = useDispatch();
-  const { selectionFind } = useSelector((state) => state.general);
-
-  // const handleOptions = (selection) => {
-  //   dispatch(setSelectionFind(selection));
-  //   console.log(selectionFind);
-  // };
-
   return (
     <View style={styles.container}>
       <View style={styles.container.title}>

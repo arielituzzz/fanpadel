@@ -2,15 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   location: { latitude: null, longitude: null },
-  selectionFind: null,
+  shiftSelected: null,
+  shiftSelection: null,
 };
 
-export const generalSlice = createSlice({
-  name: "general",
+export const shiftsSlice = createSlice({
+  name: "shifts",
   initialState,
   reducers: {
-    setSelectionFind: (state, action) => {
-      state.selectionFind = action.payload;
+    setShiftSelected: (state, action) => {
+      state.shiftSelected = action.payload;
+    },
+    setShiftSelection: (state, action) => {
+      state.shiftSelection = action.payload;
     },
     // setLocation: (state, action) => {
     //   if (!state.location.latitude || !state.location.longitude) {
@@ -21,6 +25,6 @@ export const generalSlice = createSlice({
   },
 });
 
-export const { setSelectionFind } = generalSlice.actions;
+export const { setShiftSelected, setShiftSelection } = shiftsSlice.actions;
 
-export default generalSlice.reducer;
+export default shiftsSlice.reducer;
