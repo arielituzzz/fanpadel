@@ -19,10 +19,9 @@ const Results = ({ date }) => {
         <FlatList
           data={item.hours}
           renderItem={({ item }) => (
-            <Text style={styles.container.boxDates.list.text}>{item}</Text>
+            <Text style={styles.container.boxDates.list.text}>* {item}</Text>
           )}
         />
-        {/* <Text style={styles.container.boxDates.list.text}>{item.hours}</Text> */}
       </View>
     );
   };
@@ -31,7 +30,7 @@ const Results = ({ date }) => {
     <View style={styles.container}>
       <View style={styles.container.boxDates}>
         {shifts.length <= 0 ? (
-          <Text>No hay turnos para esta fecha</Text>
+          <Text>No hay turnos</Text>
         ) : (
           <FlatList
             data={shifts}
