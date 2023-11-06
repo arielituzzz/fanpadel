@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, ImageBackground } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import styles from "./home.style";
+import ImgBackground from "../../assets/imgs/8214cf822d95f809889c105a69973367.jpg";
 
 const Home = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      source={ImgBackground}
+      resizeMode="cover"
+      style={styles.container}
+    >
       <View style={styles.container.title}>
         <Text style={styles.container.title.text}>EMPECEMOS</Text>
       </View>
@@ -21,7 +26,7 @@ const Home = ({ navigation }) => {
           </Text>
         </Pressable>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 

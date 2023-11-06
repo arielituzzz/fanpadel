@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
         items: {
           alignItems: "flex-start",
           title: {
-            fontSize: 13,
+            fontSize: 15,
             fontWeight: "bold",
           },
           date: {
-            fontSize: 15,
+            fontSize: 16,
             fontWeight: "bold",
             color: colors.light,
           },

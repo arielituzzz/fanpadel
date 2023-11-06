@@ -6,13 +6,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    rowGap: 20,
-    backgroundColor: colors.light,
+    rowGap: 70,
     title: {
       alignItems: "center",
       text: {
-        color: colors.dark,
-        fontSize: 20,
+        color: colors.light,
+        fontSize: 25,
         fontWeight: "bold",
       },
     },
@@ -33,7 +32,6 @@ const styles = StyleSheet.create({
         columnGap: 3,
         text: {
           color: colors.light,
-          // fontWeight: "bold",
           fontSize: 20,
         },
       },

@@ -14,7 +14,7 @@ function HomeNavigator() {
       screenOptions={({ route, navigation }) => ({
         headerShown: true,
         header: () => (
-          <View style={{ flexDirection: "row", marginTop: 50 }}>
+          <View style={{ flexDirection: "row" }}>
             {route.name !== "Home" ? (
               <Pressable
                 onPress={() => navigation.goBack()}
