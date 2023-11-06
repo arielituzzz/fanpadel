@@ -7,6 +7,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     rowGap: 70,
+    logoContainer: {
+      backgroundColor: colors.greyLight,
+      padding: 10,
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: 100,
+      logo: {
+        width: 150,
+        height: 150,
+        backgroundColor: colors.light,
+        borderRadius: 100,
+      },
+    },
     title: {
       alignItems: "center",
       text: {
