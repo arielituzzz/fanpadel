@@ -11,6 +11,7 @@ const initialState = {
   email: null,
   gender: null,
   update: null,
+  location: { latitude: null, longitude: null },
 };
 
 export const userSlice = createSlice({
@@ -52,10 +53,13 @@ export const userSlice = createSlice({
     setCameraImage: (state, action) => {
       return { ...state, imageCamera: action.payload };
     },
+    setLocation: (state, action) => {
+      return { ...state, location: action.payload };
+    },
   },
 });
 
-export const { setUser, clearUser, setCameraImage, setDataUser } =
+export const { setUser, clearUser, setCameraImage, setDataUser, setLocation } =
   userSlice.actions;
 
 export default userSlice.reducer;
