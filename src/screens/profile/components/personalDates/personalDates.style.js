@@ -3,13 +3,20 @@ import { colors } from "../../../../constants/colors";
 
 const styles = StyleSheet.create({
   boxDates: {
-    marginTop: 20,
+    marginVertical: 20,
     title: {
       alignItems: "center",
-      marginVertical: 10,
+      marginBottom: 10,
       text: {
+        borderWidth: 2,
+        borderColor: colors.yellow,
+        borderRadius: 20,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
         fontSize: 20,
         fontWeight: "bold",
+        color: colors.greyDark,
+        textAlign: "center",
       },
     },
     container: {
@@ -22,6 +29,7 @@ const styles = StyleSheet.create({
           title: {
             fontSize: 15,
             fontWeight: "bold",
+            color: colors.greyLight,
           },
           date: {
             fontSize: 16,

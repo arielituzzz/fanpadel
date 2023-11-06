@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     button: {
       borderWidth: 2,
       borderRadius: 10,
-      borderColor: "black",
+      borderColor: colors.greyLight,
       padding: 8,
       justifyContent: "center",
       alignItems: "center",
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
       text: {
         fontSize: 15,
         fontWeight: "bold",
+        color: colors.light,
       },
     },
   },
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
       alignItems: "center",
       title: {
         fontSize: 20,
+        color: colors.greyLight,
       },
       date: {
         fontSize: 30,

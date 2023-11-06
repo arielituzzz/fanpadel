@@ -4,6 +4,7 @@ import * as Location from "expo-location";
 import { MapPreview } from "../../../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { setLocation } from "../../../../features/user/userSlice";
+import { colors } from "../../../../constants/colors";
 
 const Map = () => {
   const dispatch = useDispatch();
@@ -28,21 +29,41 @@ const Map = () => {
       {!location.latitude || !location.longitude ? (
         <View style={{ marginTop: 20, alignItems: "center" }}>
           <Pressable onPress={locationRequest}>
-            <Text style={{ fontSize: 15, color: "white", fontWeight: "bold" }}>
+            <Text
+              style={{
+                fontSize: 15,
+                color: colors.greyDark,
+                fontWeight: "bold",
+                textDecorationLine: "underline",
+              }}
+            >
               Click here to get your LOCATION
             </Text>
           </Pressable>
         </View>
       ) : (
         <View style={{ marginTop: 20 }}>
-          <Text style={{ textAlign: "center", fontSize: 20 }}>
+          <Text
+            style={{
+              textAlign: "center",
+              fontSize: 20,
+              color: colors.greyDark,
+            }}
+          >
             Tu Ubicacion Actual
           </Text>
           <MapPreview location={location} />
         </View>
       )}
-      <View style={{ marginVertical: 20, alignItems: "center" }}>
-        <Text>Ultima actualizacion: HOY</Text>
+      <View
+        style={{
+          marginVertical: 20,
+          alignItems: "center",
+        }}
+      >
+        <Text style={{ fontSize: 15, color: colors.greyDark }}>
+          Ultima actualizacion: HOY
+        </Text>
       </View>
     </View>
   );
