@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Home, FindShifts } from "../screens";
+import { Home, FindShifts, ConfirmationShift } from "../screens";
 import { View, Pressable } from "react-native";
 // import { Header } from "../components";
 import AntDesing from "@expo/vector-icons/AntDesign";
@@ -34,7 +34,7 @@ function HomeNavigator() {
     >
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="FindShifts" component={FindShifts} />
-      {/* <Stack.Screen name="Details" component={Details} /> */}
+      <Stack.Screen name="ConfirmationShift" component={ConfirmationShift} />
     </Stack.Navigator>
   );
 }

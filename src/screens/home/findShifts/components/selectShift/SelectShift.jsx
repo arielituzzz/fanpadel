@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, Pressable } from "react-native";
 import { colors } from "../../../../../constants/colors";
 import styles from "./selectShift.style";
+import { useDispatch } from "react-redux";
+import { setShiftSelected } from "../../../../../features/shifts/shiftsSlice";
 
-const SelectShift = ({ shiftSelection }) => {
+const SelectShift = ({ shiftSelection, navigation }) => {
+  const dispatch = useDispatch();
   const disable =
     !shiftSelection?.club || !shiftSelection?.day || !shiftSelection?.hour;
   const confirmShift = () => {
     console.log(
       `Confirmaste el siguiente turno: Club: ${shiftSelection.club}, Fecha: ${shiftSelection.day}, Hora: ${shiftSelection.hour}`
     );
+    dispatch(setShiftSelected(shiftSelection));
+    navigation.navigate("ConfirmationShift");
   };
   return (
     <View style={styles.container}>

@@ -116,7 +116,10 @@ const FindShifts = ({ navigation }) => {
         </View>
 
         <View>
-          <SelectShift shiftSelection={shiftSelection} />
+          <SelectShift
+            shiftSelection={shiftSelection}
+            navigation={navigation}
+          />
         </View>
       </View>
     </View>
