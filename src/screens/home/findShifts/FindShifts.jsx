@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import styles from "./findShifts.style";
 import { useSelector, useDispatch } from "react-redux";
 import { setShiftSelection } from "../../../features/shifts/shiftsSlice";
-import { View, Text } from "react-native";
+import { View, Text, ImageBackground } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import SelectShift from "./components/selectShift/SelectShift";
 import dataClubs from "../../../data/dataClubs";
+import ImgBackground from "../../../assets/imgs/fea518d1220dd2afeb745aa318d84904.jpg";
+import { colors } from "../../../constants/colors";
 const FindShifts = ({ navigation }) => {
   const { shiftSelection } = useSelector((state) => state.shifts);
   const dispatch = useDispatch();
@@ -76,7 +78,11 @@ const FindShifts = ({ navigation }) => {
   }, [club, day]);
 
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      style={styles.container}
+      source={ImgBackground}
+      resizeMode="cover"
+    >
       <View style={styles.container.title}>
         <Text style={styles.container.title.text}>CENTRAL DE TURNOS</Text>
       </View>
@@ -87,8 +93,19 @@ const FindShifts = ({ navigation }) => {
               data={optionClubs}
               setSelected={setClub}
               placeholder="Selecciona el club"
-              inputStyles={{ fontSize: 20 }}
+              inputStyles={{ fontSize: 20, color: "white" }}
               search={false}
+              boxStyles={styles.container.find.options.input}
+              dropdownStyles={{
+                alignItems: "center",
+                borderColor: "white",
+              }}
+              dropdownTextStyles={{
+                fontSize: 15,
+                color: colors.blueDark,
+                fontWeight: "bold",
+                textAlign: "center",
+              }}
               // dropdownShown={false}
             />
           </View>
@@ -98,7 +115,18 @@ const FindShifts = ({ navigation }) => {
               setSelected={setDay}
               placeholder="Selecciona el dia"
               search={false}
-              inputStyles={{ fontSize: 20 }}
+              inputStyles={{ fontSize: 20, color: "white" }}
+              boxStyles={styles.container.find.options.input}
+              dropdownStyles={{
+                alignItems: "center",
+                borderColor: "white",
+              }}
+              dropdownTextStyles={{
+                fontSize: 15,
+                color: colors.blueDark,
+                fontWeight: "bold",
+                textAlign: "center",
+              }}
             />
           </View>
           {shiftSelection?.club && shiftSelection?.day && (
@@ -109,7 +137,14 @@ const FindShifts = ({ navigation }) => {
                 placeholder="Selecciona el horario"
                 search={false}
                 notFoundText="No hay turnos disponibles"
-                inputStyles={{ fontSize: 20 }}
+                inputStyles={{ fontSize: 20, color: "white" }}
+                boxStyles={styles.container.find.options.input}
+                dropdownStyles={{ alignItems: "center", borderColor: "white" }}
+                dropdownTextStyles={{
+                  fontSize: 15,
+                  color: colors.blueDark,
+                  fontWeight: "bold",
+                }}
               />
             </View>
           )}
@@ -122,7 +157,7 @@ const FindShifts = ({ navigation }) => {
           />
         </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 

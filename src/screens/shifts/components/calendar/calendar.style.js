@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     boxDates: {
       borderRadius: 20,
       padding: 10,
-      backgroundColor: colors.brownGrow,
+      backgroundColor: colors.blueDark,
       list: {
         margin: 10,
         backgroundColor: colors.greenGrow,
@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         text: {
           fontSize: 20,
+          fontStyle: "italic",
         },
       },
     },

@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     box: {
-      borderColor: colors.greyDark,
+      borderColor: colors.yellow,
       borderWidth: 2,
       borderRadius: 10,
       marginVertical: 10,

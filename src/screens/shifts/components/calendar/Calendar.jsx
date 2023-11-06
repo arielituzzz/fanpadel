@@ -20,6 +20,7 @@ const Calendar = ({ triggerDates }) => {
             ? {
                 ...styles.container.boxDates.list,
                 backgroundColor: colors.greyLight,
+                opacity: 0.8,
               }
             : styles.container.boxDates.list
         }

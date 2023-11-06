@@ -14,23 +14,28 @@ const Results = ({ date }) => {
 
   const renderComponent = (item) => {
     return (
-      <View style={styles.container.boxDates.list}>
-        <Text style={styles.container.boxDates.list.text}>{item.place}</Text>
-        <FlatList
-          data={item.hours}
-          renderItem={({ item }) => (
-            <Text style={styles.container.boxDates.list.text}>* {item}</Text>
-          )}
-        />
+      <View style={styles.container}>
+        <View style={styles.container.boxDates.list}>
+          <Text style={styles.container.boxDates.list.text}>{item.place}</Text>
+          <FlatList
+            data={item.hours}
+            renderItem={({ item }) => (
+              <Text style={styles.container.boxDates.list.text}>* {item}</Text>
+            )}
+          />
+        </View>
       </View>
     );
   };
 
   return (
     <View style={styles.container}>
+      <View style={styles.container.title}>
+        <Text style={styles.container.title.text}>{date}</Text>
+      </View>
       <View style={styles.container.boxDates}>
         {shifts.length <= 0 ? (
-          <Text>No hay turnos</Text>
+          <Text style={{ color: "white" }}>No hay turnos</Text>
         ) : (
           <FlatList
             data={shifts}
