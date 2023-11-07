@@ -5,39 +5,55 @@ import { setShiftSelection } from "../../../features/shifts/shiftsSlice";
 import { View, Text, ImageBackground } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import SelectShift from "./components/selectShift/SelectShift";
-import dataClubs from "../../../data/dataClubs";
+// import clubs from "../../../data/clubs";
 import ImgBackground from "../../../assets/imgs/fea518d1220dd2afeb745aa318d84904.jpg";
 import { colors } from "../../../constants/colors";
 const FindShifts = ({ navigation }) => {
+  const { clubs } = useSelector((state) => state.general);
   const { shiftSelection } = useSelector((state) => state.shifts);
+
   const dispatch = useDispatch();
 
   const [day, setDay] = useState(null);
-  const [hour, setHour] = useState(null);
+  const [keyHour, setKeyHour] = useState(null);
   const [club, setClub] = useState(null);
   const [optionHours, setOptionHours] = useState([]);
+  // const [hourShift, setHourShift] = useState([]);
 
   let todayDay = new Date().getDate() - 1;
   const todayMonth = new Date().getMonth() + 1;
   const todayYear = new Date().getFullYear();
   let todayHour = new Date().getHours();
 
-  const optionClubs = dataClubs.map((club) => {
+  const optionClubs = clubs.map((club) => {
     return club.name;
   });
 
   const optionDays = [];
 
-  const findHours = (name, date) => {
-    dataClubs.find((club) => {
+  const findHoursAvailable = (name, day) => {
+    const hoursAvailable = [];
+    const shiftsHoursAvailable = [];
+    clubs.find((club) => {
       if (club.name === name) {
-        club.shiftsAvailable.find((shift) => {
-          if (shift.day === date) {
-            setOptionHours(shift.hours);
+        club.shiftsAvailable.find((shifts) => {
+          if (shifts.day === day) {
+            shifts.hours.map((hour, i) => {
+              if (hour.value) {
+                const hourAvailable = {
+                  key: i,
+                  value: `${hour.minRange}hs - ${hour.maxRange}hs`,
+                };
+                hoursAvailable.push(hourAvailable);
+                // shiftsHoursAvailable.push(hourAvailable);
+              }
+            });
           }
         });
       }
     });
+    setOptionHours(hoursAvailable);
+    // setHourShift(shiftsHoursAvailable);
   };
 
   for (let i = 0; i < 7; i++) {
@@ -67,15 +83,24 @@ const FindShifts = ({ navigation }) => {
   // }
 
   useEffect(() => {
+    const hour = optionHours.find((hour) => {
+      return hour.key == keyHour;
+    });
+
     dispatch(setShiftSelection({ club: club, day: day, hour: hour }));
-  }, [club, day, hour]);
+  }, [club, day, keyHour]);
 
   useEffect(() => {
-    setHour(null);
+    setKeyHour(null);
     if (club && day) {
-      findHours(club, day);
+      findHoursAvailable(club, day);
     }
   }, [club, day]);
+
+  useEffect(() => {
+    console.log(shiftSelection);
+    // console.log(hourShift);
+  }, [shiftSelection]);
 
   return (
     <ImageBackground
@@ -133,7 +158,8 @@ const FindShifts = ({ navigation }) => {
             <View>
               <SelectList
                 data={optionHours}
-                setSelected={setHour}
+                setSelected={setKeyHour}
+                save="key"
                 placeholder="Selecciona el horario"
                 search={false}
                 notFoundText="No hay turnos disponibles"

@@ -1,30 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  location: { latitude: null, longitude: null },
+  shiftsAvailable: [],
   shiftSelected: null,
   shiftSelection: null,
+  shifts: [],
 };
 
 export const shiftsSlice = createSlice({
   name: "shifts",
   initialState,
   reducers: {
+    setShiftsAvailable: (state, action) => {
+      state.shiftsAvailable = action.payload;
+    },
     setShiftSelected: (state, action) => {
       state.shiftSelected = action.payload;
     },
     setShiftSelection: (state, action) => {
       state.shiftSelection = action.payload;
     },
-    // setLocation: (state, action) => {
-    //   if (!state.location.latitude || !state.location.longitude) {
-    //     state.location.latitude = action.payload.latitude;
-    //     state.location.longitude = action.payload.longitude;
-    //   }
-    // },
   },
 });
 
-export const { setShiftSelected, setShiftSelection } = shiftsSlice.actions;
+export const { setShiftSelected, setShiftSelection, setShiftsAvailable } =
+  shiftsSlice.actions;
 
 export default shiftsSlice.reducer;

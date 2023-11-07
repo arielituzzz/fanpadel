@@ -2,66 +2,246 @@ export default [
   {
     id: 1,
     name: "El Talar Padel",
-    address: "An apple mobile which is nothing like apple",
+    address: "Direccion 1",
     shiftsAvailable: [
-      {
-        day: "5/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
-        day: "6/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
       {
         day: "7/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "8/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "9/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "10/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "11/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "12/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
     ],
@@ -80,57 +260,243 @@ export default [
     address: "Direccion 2",
     shiftsAvailable: [
       {
-        day: "5/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
-        day: "6/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
         day: "7/11/2023",
-        hours: [],
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
       },
       {
         day: "8/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "9/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "10/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "11/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "12/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
     ],
@@ -149,57 +515,243 @@ export default [
     address: "Direccion 3",
     shiftsAvailable: [
       {
-        day: "5/11/2023",
-        hours: [],
-      },
-      {
-        day: "6/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
         day: "7/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "8/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "9/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "10/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "11/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "12/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
     ],
@@ -218,56 +770,243 @@ export default [
     address: "Direccion 3",
     shiftsAvailable: [
       {
-        day: "5/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
-        day: "6/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
         day: "7/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "8/11/2023",
-        hours: ["10:00 - 12:00", "14:00 - 16:00", "20:00 - 22:00"],
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
       },
       {
         day: "9/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "10/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "11/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "12/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
     ],
@@ -281,63 +1020,249 @@ export default [
     ],
   },
   {
-    id: 5,
+    id: 7,
     name: "Norbi Padel",
     address: "Direccion 4",
     shiftsAvailable: [
       {
-        day: "5/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
-        day: "6/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
-      {
         day: "7/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "8/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "9/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "10/11/2023",
-        hours: [],
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "11/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "12/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
       },
     ],
     thumbnail: "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
@@ -352,60 +1277,246 @@ export default [
   {
     id: 6,
     name: "Punto Padel",
-    address: "Direccion 5",
+    address: "Direccion 7",
     shiftsAvailable: [
-      {
-        day: "5/11/2023",
-        hours: ["20:00 - 22:00"],
-      },
-      {
-        day: "6/11/2023",
-        hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
-        ],
-      },
       {
         day: "7/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "8/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "9/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
       {
         day: "10/11/2023",
         hours: [
-          "10:00 - 12:00",
-          "14:00 - 16:00",
-          "18:00 - 20:00",
-          "20:00 - 22:00",
-          "22:00 - 24:00",
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "11/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
+        ],
+      },
+      {
+        day: "12/11/2023",
+        hours: [
+          {
+            minRange: 10,
+            maxRange: 12,
+            value: true,
+          },
+          {
+            minRange: 12,
+            maxRange: 14,
+            value: true,
+          },
+          {
+            minRange: 14,
+            maxRange: 16,
+            value: true,
+          },
+          {
+            minRange: 16,
+            maxRange: 18,
+            value: true,
+          },
+          {
+            minRange: 18,
+            maxRange: 20,
+            value: true,
+          },
+          {
+            minRange: 20,
+            maxRange: 22,
+            value: true,
+          },
+          {
+            minRange: 22,
+            maxRange: 24,
+            value: true,
+          },
         ],
       },
     ],

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    rowGap: 70,
+    rowGap: 40,
     logoContainer: {
       backgroundColor: colors.greyLight,
       padding: 10,
@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
       alignItems: "center",
       borderRadius: 100,
       logo: {
-        width: 150,
-        height: 150,
+        width: 130,
+        height: 130,
         backgroundColor: colors.light,
         borderRadius: 100,
       },

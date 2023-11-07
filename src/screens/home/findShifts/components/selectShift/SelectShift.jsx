@@ -11,7 +11,7 @@ const SelectShift = ({ shiftSelection, navigation }) => {
     !shiftSelection?.club || !shiftSelection?.day || !shiftSelection?.hour;
   const confirmShift = () => {
     console.log(
-      `Confirmaste el siguiente turno: Club: ${shiftSelection.club}, Fecha: ${shiftSelection.day}, Hora: ${shiftSelection.hour}`
+      `Confirmaste el siguiente turno: Club: ${shiftSelection.club}, Fecha: ${shiftSelection.day}, Hora: ${shiftSelection.hour.value}`
     );
     dispatch(setShiftSelected(shiftSelection));
     navigation.navigate("ConfirmationShift");
@@ -32,7 +32,7 @@ const SelectShift = ({ shiftSelection, navigation }) => {
                 {shiftSelection?.day && `Fecha: ${shiftSelection.day}`}
               </Text>
               <Text style={styles.container.box.shift.dates.text}>
-                {shiftSelection?.hour && `Hora: ${shiftSelection.hour}`}
+                {shiftSelection?.hour && `Hora: ${shiftSelection.hour.value}`}
               </Text>
             </View>
             <View style={styles.container.box.shift.boxButton}>

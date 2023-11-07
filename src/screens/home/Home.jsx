@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, Pressable, ImageBackground, Image } from "react-native";
+import { useGetClubsQuery } from "../../services/clubsApi";
+import { useDispatch } from "react-redux";
+import { setClubs } from "../../features/general/generalSlice";
 import styles from "./home.style";
 import ImgBackground from "../../assets/imgs/8214cf822d95f809889c105a69973367.jpg";
 import ImgLogo from "../../assets/imgs/logo-app.png";
-import ImgBackgroundLogo from "../../assets/imgs/tenis-ball.jpg";
 
 const Home = ({ navigation }) => {
+  const dispatch = useDispatch();
+  const { data, isLoading } = useGetClubsQuery();
+
+  useEffect(() => {
+    if (!isLoading) {
+      dispatch(setClubs(data));
+    }
+  }, [data]);
+
   return (
     <ImageBackground
       source={ImgBackground}

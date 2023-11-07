@@ -29,7 +29,7 @@ const ConfirmationShift = ({ navigation }) => {
               Fecha: {shiftSelected.day}
             </Text>
             <Text style={styles.container.box.content.data.text}>
-              Horario: {shiftSelected.hour}
+              Horario: {shiftSelected.hour.value}
             </Text>
           </View>
         </View>
