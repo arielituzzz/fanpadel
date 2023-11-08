@@ -5,7 +5,6 @@ import { setShiftSelection } from "../../../features/shifts/shiftsSlice";
 import { View, Text, ImageBackground } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import SelectShift from "./components/selectShift/SelectShift";
-// import clubs from "../../../data/clubs";
 import ImgBackground from "../../../assets/imgs/fea518d1220dd2afeb745aa318d84904.jpg";
 import { colors } from "../../../constants/colors";
 const FindShifts = ({ navigation }) => {
@@ -16,9 +15,9 @@ const FindShifts = ({ navigation }) => {
 
   const [day, setDay] = useState(null);
   const [keyHour, setKeyHour] = useState(null);
-  const [club, setClub] = useState(null);
+  const [idClub, setIdClub] = useState(null);
+  const [clubSelected, setClubSelected] = useState(null);
   const [optionHours, setOptionHours] = useState([]);
-  // const [hourShift, setHourShift] = useState([]);
 
   let todayDay = new Date().getDate() - 1;
   const todayMonth = new Date().getMonth() + 1;
@@ -26,16 +25,28 @@ const FindShifts = ({ navigation }) => {
   let todayHour = new Date().getHours();
 
   const optionClubs = clubs.map((club) => {
-    return club.name;
+    return { key: club.id, value: club.name };
   });
 
   const optionDays = [];
 
-  const findHoursAvailable = (name, day) => {
-    const hoursAvailable = [];
-    const shiftsHoursAvailable = [];
+  const findClub = (id) => {
     clubs.find((club) => {
-      if (club.name === name) {
+      if (club.id == id) {
+        const clubAdd = {
+          id: club.id,
+          name: club.name,
+        };
+        setClubSelected(clubAdd);
+        return clubAdd;
+      }
+    });
+  };
+
+  const findHoursAvailable = (id, day) => {
+    const hoursAvailable = [];
+    clubs.find((club) => {
+      if (club.id === id) {
         club.shiftsAvailable.find((shifts) => {
           if (shifts.day === day) {
             shifts.hours.map((hour, i) => {
@@ -45,7 +56,6 @@ const FindShifts = ({ navigation }) => {
                   value: `${hour.minRange}hs - ${hour.maxRange}hs`,
                 };
                 hoursAvailable.push(hourAvailable);
-                // shiftsHoursAvailable.push(hourAvailable);
               }
             });
           }
@@ -53,7 +63,6 @@ const FindShifts = ({ navigation }) => {
       }
     });
     setOptionHours(hoursAvailable);
-    // setHourShift(shiftsHoursAvailable);
   };
 
   for (let i = 0; i < 7; i++) {
@@ -63,44 +72,26 @@ const FindShifts = ({ navigation }) => {
       i === 0 ? { key: date, value: `${date} HOY` } : { key: date, value: date }
     );
   }
-  // for (let i = 0; i < 7; i++) {
-  //   todayHour = todayHour + 2;
-  //   if (todayHour > 22) {
-  //     break;
-  //   }
 
-  //   const rangeMaxHour = todayHour + 2;
-
-  //   const rangeHour = {
-  //     min: todayHour,
-  //     max: rangeMaxHour,
-  //   };
-
-  //   optionHours.push({
-  //     key: rangeHour,
-  //     value: `${todayHour} a ${rangeMaxHour}`,
-  //   });
-  // }
+  useEffect(() => {
+    if (idClub) {
+      findClub(idClub);
+    }
+  }, [idClub]);
 
   useEffect(() => {
     const hour = optionHours.find((hour) => {
       return hour.key == keyHour;
     });
-
-    dispatch(setShiftSelection({ club: club, day: day, hour: hour }));
-  }, [club, day, keyHour]);
+    dispatch(setShiftSelection({ club: clubSelected, day: day, hour: hour }));
+  }, [clubSelected, day, keyHour]);
 
   useEffect(() => {
     setKeyHour(null);
-    if (club && day) {
-      findHoursAvailable(club, day);
+    if (clubSelected && day) {
+      findHoursAvailable(clubSelected.id, day);
     }
-  }, [club, day]);
-
-  useEffect(() => {
-    console.log(shiftSelection);
-    // console.log(hourShift);
-  }, [shiftSelection]);
+  }, [clubSelected, day]);
 
   return (
     <ImageBackground
@@ -116,7 +107,8 @@ const FindShifts = ({ navigation }) => {
           <View>
             <SelectList
               data={optionClubs}
-              setSelected={setClub}
+              setSelected={setIdClub}
+              save="key"
               placeholder="Selecciona el club"
               inputStyles={{ fontSize: 20, color: "white" }}
               search={false}

@@ -4,23 +4,18 @@ import userSlice from "../features/user/userSlice";
 import shiftsSlice from "../features/shifts/shiftsSlice";
 import generalSlice from "../features/general/generalSlice";
 import { clubsApi } from "../services/clubsApi";
-// import { shopApi } from "../services/shopApi";
-// import { authApi } from "../services/authApi";
-// import shopSlice from "../features/shop/shopSlice";
-// import cartSlice from "../features/cart/cartSlice";
+import { authApi } from "../services/authApi";
+
 const store = configureStore({
   reducer: {
     general: generalSlice,
     user: userSlice,
     shifts: shiftsSlice,
     [clubsApi.reducerPath]: clubsApi.reducer,
-    // [authApi.reducerPath]: authApi.reducer,
-    // shop: shopSlice,
-    // cart: cartSlice,
+    [authApi.reducerPath]: authApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    // getDefaultMiddleware().concat(shopApi.middleware, authApi.middleware),
-    getDefaultMiddleware().concat(clubsApi.middleware),
+    getDefaultMiddleware().concat(clubsApi.middleware, authApi.middleware),
 });
 
 setupListeners(store.dispatch);

@@ -11,12 +11,6 @@ export const generalSlice = createSlice({
     setClubs: (state, action) => {
       state.clubs = action.payload;
     },
-    // setShiftSelected: (state, action) => {
-    //   state.shiftSelected = action.payload;
-    // },
-    // setShiftSelection: (state, action) => {
-    //   state.shiftSelection = action.payload;
-    // },
   },
 });
 

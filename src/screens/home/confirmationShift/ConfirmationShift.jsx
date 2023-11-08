@@ -23,7 +23,7 @@ const ConfirmationShift = ({ navigation }) => {
           </Text>
           <View style={styles.container.box.content.data}>
             <Text style={styles.container.box.content.data.text}>
-              Club: {shiftSelected.club}
+              Club: {shiftSelected.club.name}
             </Text>
             <Text style={styles.container.box.content.data.text}>
               Fecha: {shiftSelected.day}

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import * as Location from "expo-location";
+import { setLocation } from "../../features/user/userSlice";
 import { View, Text, Pressable, ImageBackground, Image } from "react-native";
 import { useGetClubsQuery } from "../../services/clubsApi";
 import { useDispatch } from "react-redux";
@@ -16,6 +18,22 @@ const Home = ({ navigation }) => {
       dispatch(setClubs(data));
     }
   }, [data]);
+
+  useEffect(() => {
+    (async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        console.log("Permiso denegado!");
+        return;
+      }
+      let location = await Location.getCurrentPositionAsync({});
+      const userLocation = {
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+      };
+      dispatch(setLocation(userLocation));
+    })();
+  }, []);
 
   return (
     <ImageBackground

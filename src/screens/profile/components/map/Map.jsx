@@ -9,11 +9,11 @@ import { colors } from "../../../../constants/colors";
 const Map = () => {
   const dispatch = useDispatch();
 
-  const { location } = useSelector((state) => state.user);
+  const { location, update } = useSelector((state) => state.user);
   const locationRequest = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();
     if (status !== "granted") {
-      console.log("permission denied");
+      console.log("Permiso denegado");
       return;
     }
     let location = await Location.getCurrentPositionAsync({});
@@ -26,7 +26,7 @@ const Map = () => {
 
   return (
     <View>
-      {!location.latitude || !location.longitude ? (
+      {!location?.latitude || !location?.longitude ? (
         <View style={{ marginTop: 20, alignItems: "center" }}>
           <Pressable onPress={locationRequest}>
             <Text
@@ -62,7 +62,7 @@ const Map = () => {
         }}
       >
         <Text style={{ fontSize: 15, color: colors.greyDark }}>
-          Ultima actualizacion: HOY
+          Ultima actualizacion: {update}
         </Text>
       </View>
     </View>

@@ -30,15 +30,6 @@ const Calendar = ({ triggerDates }) => {
       >
         <Text style={styles.container.boxDates.list.text}>{formatedDate}</Text>
       </Pressable>
-      // <FlatList
-      //   data={item.shifts}
-      //   renderItem={({ item }) => (
-      //     <View>
-      //       <Text>{item.place}</Text>
-      //       <Text>{item.hours}</Text>
-      //     </View>
-      //   )}
-      // />
     );
   };
 

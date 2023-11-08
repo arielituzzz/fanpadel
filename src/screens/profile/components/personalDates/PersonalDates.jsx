@@ -1,8 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { useSelector } from "react-redux";
 import styles from "./personalDates.style";
 
 const PersonalDates = () => {
+  const { name, lastName, email, gender } = useSelector((state) => state.user);
   return (
     <View style={styles.boxDates}>
       <View style={styles.boxDates.title}>
@@ -12,10 +14,10 @@ const PersonalDates = () => {
         <View style={styles.boxDates.container.col}>
           <View style={styles.boxDates.container.col.items}>
             <Text style={styles.boxDates.container.col.items.title}>
-              Nombre y Apellido
+              Apellido y Nombre
             </Text>
             <Text style={styles.boxDates.container.col.items.date}>
-              Ariel Suarez
+              {`${lastName} ${name}`}
             </Text>
           </View>
           <View style={styles.boxDates.container.col.items}>
@@ -23,7 +25,7 @@ const PersonalDates = () => {
               Correo Electronico
             </Text>
             <Text style={styles.boxDates.container.col.items.date}>
-              suarezariel86@gmail.com
+              {email}
             </Text>
           </View>
           <View style={styles.boxDates.container.col.items}>
@@ -47,7 +49,7 @@ const PersonalDates = () => {
               Genero
             </Text>
             <Text style={styles.boxDates.container.col.items.date}>
-              Masculino
+              {gender}
             </Text>
           </View>
           <View style={styles.boxDates.container.col.items}>
@@ -55,7 +57,7 @@ const PersonalDates = () => {
               Telefono
             </Text>
             <Text style={styles.boxDates.container.col.items.date}>
-              116-416-9277
+              116-716-6544
             </Text>
           </View>
         </View>

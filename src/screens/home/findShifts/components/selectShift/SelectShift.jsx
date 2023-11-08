@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { View, Text, FlatList, Pressable } from "react-native";
+import React from "react";
+import { View, Text, Pressable } from "react-native";
 import { colors } from "../../../../../constants/colors";
 import styles from "./selectShift.style";
 import { useDispatch } from "react-redux";
@@ -11,7 +11,7 @@ const SelectShift = ({ shiftSelection, navigation }) => {
     !shiftSelection?.club || !shiftSelection?.day || !shiftSelection?.hour;
   const confirmShift = () => {
     console.log(
-      `Confirmaste el siguiente turno: Club: ${shiftSelection.club}, Fecha: ${shiftSelection.day}, Hora: ${shiftSelection.hour.value}`
+      `Confirmaste el siguiente turno: Club: ${shiftSelection.club.name}, Fecha: ${shiftSelection.day}, Horario: ${shiftSelection.hour.value}`
     );
     dispatch(setShiftSelected(shiftSelection));
     navigation.navigate("ConfirmationShift");
@@ -26,7 +26,7 @@ const SelectShift = ({ shiftSelection, navigation }) => {
           <View style={styles.container.box.shift}>
             <View style={styles.container.box.shift.dates}>
               <Text style={styles.container.box.shift.dates.text}>
-                {shiftSelection?.club && `Club: ${shiftSelection.club}`}
+                {shiftSelection?.club && `Club: ${shiftSelection.club.name}`}
               </Text>
               <Text style={styles.container.box.shift.dates.text}>
                 {shiftSelection?.day && `Fecha: ${shiftSelection.day}`}
