@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Home, FindShifts } from "../screens";
+import { Home, FindShifts, ConfirmationShift } from "../screens";
 import { View, Pressable } from "react-native";
-// import { Header } from "../components";
 import AntDesing from "@expo/vector-icons/AntDesign";
 import { colors } from "../constants/colors";
 
@@ -14,7 +13,7 @@ function HomeNavigator() {
       screenOptions={({ route, navigation }) => ({
         headerShown: true,
         header: () => (
-          <View style={{ flexDirection: "row", marginTop: 50 }}>
+          <View style={{ flexDirection: "row" }}>
             {route.name !== "Home" ? (
               <Pressable
                 onPress={() => navigation.goBack()}
@@ -26,15 +25,13 @@ function HomeNavigator() {
                 <AntDesing name="back" size={25} color={"black"} />
               </Pressable>
             ) : null}
-            {/* <Header title={route.name} /> */}
-            {/* <Header title={route.name === "Home" ? "Home" : "Other Title"} /> */}
           </View>
         ),
       })}
     >
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="FindShifts" component={FindShifts} />
-      {/* <Stack.Screen name="Details" component={Details} /> */}
+      <Stack.Screen name="ConfirmationShift" component={ConfirmationShift} />
     </Stack.Navigator>
   );
 }

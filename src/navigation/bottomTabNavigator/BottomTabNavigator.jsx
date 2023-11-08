@@ -3,17 +3,13 @@ import HomeNavigator from "../HomeNavigator";
 import { Profile, Shifts } from "../../screens";
 import { FontAwesome } from "@expo/vector-icons/";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-// import { UserAvatar } from "../../components";
 import styles from "./bottomTabNavigator.style";
 import { colors } from "../../constants/colors";
 import { Text, View } from "react-native";
-// import { useSelector } from "react-redux";
 
 const BottomTab = createBottomTabNavigator();
 
 function BottomTabNavigator() {
-  // const counter = useSelector((state) => state.cart.items.length);
-  // const { user } = useSelector((state) => state.auth);
   return (
     <BottomTab.Navigator
       initialRouteName="Shop"

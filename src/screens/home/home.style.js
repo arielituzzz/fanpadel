@@ -6,13 +6,25 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    rowGap: 20,
-    backgroundColor: colors.light,
+    rowGap: 40,
+    logoContainer: {
+      backgroundColor: colors.greyLight,
+      padding: 10,
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: 100,
+      logo: {
+        width: 130,
+        height: 130,
+        backgroundColor: colors.light,
+        borderRadius: 100,
+      },
+    },
     title: {
       alignItems: "center",
       text: {
-        color: colors.dark,
-        fontSize: 20,
+        color: colors.light,
+        fontSize: 25,
         fontWeight: "bold",
       },
     },
@@ -33,7 +45,6 @@ const styles = StyleSheet.create({
         columnGap: 3,
         text: {
           color: colors.light,
-          // fontWeight: "bold",
           fontSize: 20,
         },
       },

@@ -1,26 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  location: { latitude: null, longitude: null },
-  selectionFind: null,
+  clubs: [],
 };
 
 export const generalSlice = createSlice({
-  name: "general",
+  name: "shifts",
   initialState,
   reducers: {
-    setSelectionFind: (state, action) => {
-      state.selectionFind = action.payload;
+    setClubs: (state, action) => {
+      state.clubs = action.payload;
     },
-    // setLocation: (state, action) => {
-    //   if (!state.location.latitude || !state.location.longitude) {
-    //     state.location.latitude = action.payload.latitude;
-    //     state.location.longitude = action.payload.longitude;
-    //   }
-    // },
   },
 });
 
-export const { setSelectionFind } = generalSlice.actions;
+export const { setClubs } = generalSlice.actions;
 
 export default generalSlice.reducer;

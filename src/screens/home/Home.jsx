@@ -1,21 +1,52 @@
-import React, { useState } from "react";
-import { View, Text, Pressable } from "react-native";
-import { SelectList } from "react-native-dropdown-select-list";
+import React, { useEffect } from "react";
+import * as Location from "expo-location";
+import { setLocation } from "../../features/user/userSlice";
+import { View, Text, Pressable, ImageBackground, Image } from "react-native";
+import { useGetClubsQuery } from "../../services/clubsApi";
+import { useDispatch } from "react-redux";
+import { setClubs } from "../../features/general/generalSlice";
 import styles from "./home.style";
-import { useSelector, useDispatch } from "react-redux";
-import { setSelectionFind } from "../../features/general/generalSlice";
+import ImgBackground from "../../assets/imgs/8214cf822d95f809889c105a69973367.jpg";
+import ImgLogo from "../../assets/imgs/logo-app.png";
 
 const Home = ({ navigation }) => {
   const dispatch = useDispatch();
-  const { selectionFind } = useSelector((state) => state.general);
+  const { data, isLoading } = useGetClubsQuery();
 
-  // const handleOptions = (selection) => {
-  //   dispatch(setSelectionFind(selection));
-  //   console.log(selectionFind);
-  // };
+  useEffect(() => {
+    if (!isLoading) {
+      dispatch(setClubs(data));
+    }
+  }, [data]);
+
+  useEffect(() => {
+    (async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        console.log("Permiso denegado!");
+        return;
+      }
+      let location = await Location.getCurrentPositionAsync({});
+      const userLocation = {
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+      };
+      dispatch(setLocation(userLocation));
+    })();
+  }, []);
 
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      source={ImgBackground}
+      resizeMode="cover"
+      style={styles.container}
+    >
+      <ImageBackground style={styles.container.logoContainer}>
+        <Image
+          source={ImgLogo}
+          style={styles.container.logoContainer.logo}
+        ></Image>
+      </ImageBackground>
       <View style={styles.container.title}>
         <Text style={styles.container.title.text}>EMPECEMOS</Text>
       </View>
@@ -31,7 +62,7 @@ const Home = ({ navigation }) => {
           </Text>
         </Pressable>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 
